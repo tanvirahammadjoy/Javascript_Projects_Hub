@@ -1,0 +1,179 @@
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+/* Header Styles */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgb(255, 247, 247);
+  margin-bottom: 20px;
+}
+
+header ul {
+  display: flex;
+  gap: 10px;
+}
+
+h2 i {
+  color: rgb(255, 87, 87);
+  font-size: 50px;
+  margin-left: 20px;
+}
+
+li {
+  list-style: none;
+}
+
+ul button {
+  background-color: rgb(238, 255, 127);
+  border: none;
+  border-radius: 10px;
+  display: block;
+}
+
+ul button i {
+  font-size: 30px;
+  padding: 10px 20px;
+  height: 100%;
+  width: 100%;
+  color: rgb(62, 62, 62);
+  border-radius: 10px;
+}
+
+ul button i:hover {
+  background-color: rgb(255, 188, 101);
+  color: black;
+}
+
+/* Main Container */
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-box {
+  width: 500px;
+  min-height: 500px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+/* Todo List Styles */
+.todo-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(250, 255, 97, 0.884);
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.todo-text {
+  margin-right: 5px;
+  font-size: 1.3rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.todo-list i {
+  font-size: 25px;
+  padding: 10px;
+  margin: 5px;
+  background-color: rgb(255, 161, 39);
+  border-radius: 10px;
+  color: white;
+}
+
+.todo-list i:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
+.active {
+  text-decoration: line-through;
+}
+
+/* Input Container */
+.input-container input {
+  width: 600px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 10px;
+  border: solid gray;
+}
+
+/* Edit Input Field */
+.edit-text {
+  /* Removed display: none; */
+  width: 310px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+/* Message Modal */
+.message-modal {
+  /* Removed display: none; */
+  position: fixed;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  background: red;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 10%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Footer Styles */
+footer {
+  height: 50px;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
