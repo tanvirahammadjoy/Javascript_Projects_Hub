@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo-full-stack-web-app</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-section"><h2>todo-app</h2></div>
+    </header>
+    <main class="main-container">
+      <div class="content-box">
+        <div class="nav-section">
+          <div class="input-section">
+            <input
+              class="inputText"
+              type="text"
+              placeholder="Enter your text here..."
+            />
+          </div>
+          <div class="button-section">
+            <button class="addBtn" type="button">Add</button>
+            <button class="saveBtn" type="button">Save</button>
+          </div>
+        </div>
+        <ul class="todo-list-container">
+          <li class="list-item">
+            <div class="li-text-box">
+              <span class="span-text">hello todo</span>
+            </div>
+            <div class="li-btn-box">
+              <button type="button" class="edit-text">edit</button>
+              <button type="button" class="del-text">del</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <div class="message-modal-ifEmpty">
+      <p>Enter something to add to do...</p>
+    </div>
+    <div class="message-modal-ifSuccess">
+      <p>Todo successfully add...</p>
+    </div>
+    <div class="message-modal-ifdeleted">
+      <p>Todo successfully deleted...</p>
+    </div>
+    <div class="message-modal-ifEdited">
+      <p>Todo successfully editSaved...</p>
+    </div>
+    <footer>
+      <p>&COPY; all rights reserved by tanvir ahammad</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

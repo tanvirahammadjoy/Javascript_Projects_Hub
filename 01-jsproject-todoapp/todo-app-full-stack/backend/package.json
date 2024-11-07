@@ -1,0 +1,26 @@
+{
+  "name": "todo-app-full-stack",
+  "version": "1.0.0",
+  "description": "this is an todo fullstack web app with vanilla html css and javascript mongodb and more",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "todo",
+    "app"
+  ],
+  "author": "tanvir ahammad",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
