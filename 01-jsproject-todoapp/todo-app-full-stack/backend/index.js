@@ -12,13 +12,15 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "/"))); // Serve static files
+
+// Serve static files from the client build directory
+app.use(express.static(path.join(__dirname, "../client/src")));
 
 // MongoDB Connection
 const mongoURI = process.env.MONGODB_URI; // Replace with your MongoDB connection string
 
 mongoose
-  .connect(mongoURI)
+  .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB connected successfully"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
@@ -108,13 +110,13 @@ app.delete("/api/todos/:id", async (req, res) => {
 });
 
 // Serve Front-End
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/src/index.html"));
 });
 
 // Start Server
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on port http://localhost:${PORT}`);
 });
