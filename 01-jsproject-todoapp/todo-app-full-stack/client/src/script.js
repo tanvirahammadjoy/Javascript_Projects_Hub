@@ -187,6 +187,6 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.style.display = "block";
     setTimeout(() => {
       modal.style.display = "none";
-    }, 3000);
+    }, 2000);
   }
 });
