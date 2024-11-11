@@ -1,0 +1,23 @@
+<!-- src/views/partials/header.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OAuth Authentication App</title>
+  <!-- Link to the CSS file -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Display flash messages -->
+    <% if (success_msg) { %>
+      <div class="alert success"><%= success_msg %></div>
+    <% } %>
+    <% if (error_msg) { %>
+      <div class="alert error"><%= error_msg %></div>
+    <% } %>
+    <% if (error) { %>
+      <div class="alert error"><%= error %></div>
+    <% } %>

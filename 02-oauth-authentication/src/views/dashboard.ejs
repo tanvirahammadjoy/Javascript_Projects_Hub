@@ -1,0 +1,23 @@
+<!-- src/views/dashboard.ejs -->
+<%- include('partials/header') %>
+<h2>Dashboard</h2>
+<p>Welcome, <%= user.name %>!</p>
+<p>Email: <%= user.email %></p>
+<% if (user.googleId || user.facebookId || user.appleId) { %>
+  <p>You have logged in using:</p>
+  <ul>
+    <% if (user.googleId) { %>
+      <li>Google</li>
+    <% } %>
+    <% if (user.facebookId) { %>
+      <li>Facebook</li>
+    <% } %>
+    <% if (user.appleId) { %>
+      <li>Apple</li>
+    <% } %>
+  </ul>
+<% } else { %>
+  <p>You are logged in using email and password.</p>
+<% } %>
+<a href="/auth/logout">Logout</a>
+<%- include('partials/footer') %>

@@ -1,0 +1,10 @@
+<!-- src/views/index.ejs -->
+<%- include('partials/header') %>
+<h1>Welcome to the OAuth Authentication App</h1>
+<% if (user) { %>
+  <p>Hello, <%= user.name %>!</p>
+  <a href="/dashboard">Go to Dashboard</a> | <a href="/auth/logout">Logout</a>
+<% } else { %>
+  <a href="/auth/login">Login</a> | <a href="/auth/register">Register</a>
+<% } %>
+<%- include('partials/footer') %>
