@@ -88,11 +88,13 @@ a:hover {
 .alert.success {
   background-color: #dff0d8;
   color: #3c763d;
+  display: none;
 }
 
 .alert.error {
   background-color: #f2dede;
   color: #a94442;
+  display: none;
 }
 
 /* Social login buttons */
