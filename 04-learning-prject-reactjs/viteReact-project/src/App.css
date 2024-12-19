@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.product-row {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.table-header {
+  display: flex;
+  gap: 30px;
+}
+
+.Filterable-product-table {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+thead tr th{
+  text-align: start;
+}
+
+.out-of-stock {
+  color: red;
+}
