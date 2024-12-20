@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-button {
+.square {
   width: 100px;
   height: 100px;
   font-size: 50px;
@@ -13,4 +13,24 @@ button {
 
 .board-row {
   display: flex; /* Keep buttons aligned in a row */
+}
+
+.historyBtn {
+  padding: 10px;
+  margin: 5px;
+  font-size: 0.9rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 600;
+}
+
+.reset-btn {
+  padding: 10px;
+  margin: 5px;
+  font-size: 1.5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.states{
+  font-size: 2rem;
+  margin: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
