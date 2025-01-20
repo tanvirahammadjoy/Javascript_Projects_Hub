@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let's make an counter app</title>
+</head>
+<body>
+    <h1 id="counter-container">hello count: <span>0</span></h1>
+    <button class="increment" type="button">Increment</button>
+    <button class="decrement" type="button">Decrement</button>
+    <button class="reset" type="button">reset</button>
+
+    <script>
+        const counterContainer = document.getElementById("counter-container");
+        const span = document.querySelector("span")
+        const increment = document.querySelector(".increment")
+        const decrement = document.querySelector(".decrement")
+        const reset = document.querySelector(".reset")
+
+        let count = 0;
+
+        function main(){
+            function updateCount(){
+                span.textContent = count;
+            }
+
+            return{
+                increment(){
+                    count++;
+                    updateCount();
+                },
+                decrement(){
+                    count--;
+                    updateCount();
+                },
+                reset(){
+                    count = 0;
+                    updateCount()
+                }
+            }
+        }
+
+        const mainFun = main();
+
+        increment.addEventListener("click", () => {
+            if(count === 10){
+                return;
+            }else{
+                mainFun.increment();
+            }
+        })
+        decrement.addEventListener("click", () => {
+            if(count === 0){
+                return;
+            }else{
+                mainFun.decrement();
+            }
+        })
+        reset.addEventListener("click", mainFun.reset)
+    </script>
+</body>
+</html>
