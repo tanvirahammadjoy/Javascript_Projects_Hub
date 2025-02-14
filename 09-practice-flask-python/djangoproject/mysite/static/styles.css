@@ -1,0 +1,27 @@
+body {
+  background-color: rgb(166, 0, 255);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  line-height: 1.5;
+}
+
+html {
+  font-size: 16px;
+}
+
+li a {
+    color: #ffacac;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+li a:hover {
+    color: rgb(0, 255, 0);
+}
+
+li a:active {
+    color: rgb(60, 0, 255);
+}
+  
