@@ -19,4 +19,6 @@ from . import views
 
 urlpatterns = [
     path('', views.all_index, name='all_index'),
+    path('<int:product_id>/', views.detail, name='detail'),
+    path('app_stores/', views.app_stores_view, name='app_stores_view'),
 ]

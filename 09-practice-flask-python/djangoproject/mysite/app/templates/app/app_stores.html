@@ -1,0 +1,14 @@
+{% extends "layout.html" %} {% block content %}
+<!-- Add your Form here -->
+<form
+  method="post"
+  action=""
+  class="flex flex-col items-center justify-center w-screen h-96"
+>
+  {% csrf_token %}
+  <!-- Add your form fields here -->
+  <input type="text" name="store_name" placeholder="Store Name" required class="p-2 border text-black border-gray-300 rounded" />
+  <input type="submit" value="Submit" class="mt-4 p-2 bg-blue-500 text-white rounded" />
+</form>
+{% endblock content %}
+    

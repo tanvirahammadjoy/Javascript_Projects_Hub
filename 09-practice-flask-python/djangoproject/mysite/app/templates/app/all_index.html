@@ -3,9 +3,28 @@
 {% block title %}Home Page{% endblock %}
 
 {% block content %}
-<h1>All Chai Page</h1>
-<p>chai jindabad</p>
-<p>Today's date is {{ current_date }}</p>
-<p>Here you can find information about our services and updates.</p>
-<p>Check out our latest offerings!</p>
+<h1 class="flex items-center justify-center">All Chai Page</h1>
+<p class="flex items-center justify-center">chai jindabad</p>
+<p class="flex items-center justify-center">Today's date is {{ current.date }}</p>
+
+<p class="flex items-center justify-center">Explore our range of teas and find your perfect blend!</p>
+{% if teas %}
+    <div class="grid grid-cols-3 gap-4 m-4"> <!-- Opening ul tag for tea items -->
+    {% for tea in teas %}
+    <div class="tea-item bg-blue-600 p-5 rounded-lg"> <!-- Opening div tag for each tea item -->
+        <img class="tea-image" src="{{ tea.image.url }}" alt="{{ tea.name }}">
+        <h3>{{ tea.name }} - {{ tea.description }}</h3> <!-- Closing li tag for tea item -->
+        <p>Price: ${{ tea.price }}</p>
+        <a href="{% url 'detail' tea.id %}">
+            <button type="button" class="inline-flex items-center justify-center rounded-md text-white bg-orange-300 hover:bg-orange-700 focus:ring-orange-500 p-4 w-full">{{ tea.type }} - {{ tea.id }}</button> <!-- Corrected 'typ' to 'type' -->
+        </a>
+    </div> <!-- Closing div tag for each tea item -->
+    {% endfor %}
+    </div>
+{% else %}
+    <p class="flex items-center justify-center">No teas available at the moment.</p>
+{% endif %}
+{% block additional_info %}
+<p class="flex items-center justify-center">Check back later for new arrivals!</p>
+{% endblock %}
 {% endblock %}

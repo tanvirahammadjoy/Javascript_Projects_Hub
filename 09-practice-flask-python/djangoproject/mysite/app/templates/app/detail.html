@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<h1>Chai Details</h1>
+{% if tea %}
+    <div>
+        <img class="tea-image" src="{{ tea.image.url }}" alt="{{ tea.name }}">
+        <h3>{{ tea.name }} - {{ tea.description }}</h3>
+        <p>Price: ${{ tea.price }}</p>
+        <p>Type: {{ tea.type }}</p>
+        <p>Stock: {{ tea.stock }}</p>
+        <p>Country: {{ tea.country }}</p>
+        <p>Ingredients: {{ tea.ingredients }}</p>
+        <p>Steeping Time: {{ tea.steeping_time }}</p>
+        <p>Steeping Temperature: {{ tea.steeping_temperature }}</p>
+        <p>Caffeine Level: {{ tea.caffeine_level }}</p>
+        <p>Health Benefits: {{ tea.health_benefits }}</p>
+        <p>Flavor: {{ tea.flavor }}</p>
+        <p>Color: {{ tea.color }}</p>
+        <p>Rating: {{ tea.rating }}</p>
+        <p>Reviews: {{ tea.reviews }}</p>
+    </div>
+{% else %}
+<p>No teas available at the moment.</p>
+{% endif %}
+
+{% block additional_info %}
+<p>Check back later for new arrivals!</p>
+{% endblock %}
+{% endblock %}
